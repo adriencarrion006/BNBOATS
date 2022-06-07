@@ -32,7 +32,8 @@ class BoatsController < ApplicationController
     end
   end
   private
+
   def boat_params
     params[:boat].permit(:description, :picture, :boat_model, :licence, :person_number, :price, :localisation)
   end
-  end
+end
