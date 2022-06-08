@@ -7,3 +7,6 @@
 <p><%= @boat.person_number %></p>
 <p><%= @boat.price %></p>
 <p><%= @boat.localisation %></p>
+<br>
+<br>
+ <%= link_to "Reserver" , new_boat_rent_path(@boat.id) %>
