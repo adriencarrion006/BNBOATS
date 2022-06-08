@@ -16,7 +16,7 @@
   </div>
 </nav>
 <a href="..." class="btn btn-primary">Se connecter</a>
-<%= @boats.each do |boat|%>
+<% @boats.each do |boat|%>
   <%= link_to boat_path(boat) do %>
     <div class="card-product">
         <h2><%= boat.boat_model %></h2>

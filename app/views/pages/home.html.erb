@@ -1,5 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<% @boat.each do |boat| %>
-  <p><%= boat.boat_model %></p>
-<% end %>
+<h1>RBNBOATS</h1>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Acceuil</span></a>
+      <a class="nav-item nav-link" href="#">Lieu</a>
+      <a class="nav-item nav-link" href="#">Prix</a>
+      <a class="nav-item nav-link disabled" href="#">Bateau</a>
+    </div>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  </div>
+</nav>
+
+<a href="..." class="btn btn-primary">Se connecter</a>
+
+<img src="https://images.unsplash.com/photo-1545566239-0b2fb5c50bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fGJvYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Bateau homepage">
