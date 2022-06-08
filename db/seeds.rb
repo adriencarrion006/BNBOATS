@@ -8,6 +8,9 @@
 # installer gem dans le file
 #bundle install
 #doc de la gem
+
+Rent.destroy_all
+Boat.destroy_all
 puts "creation des seeds"
 boat_name = ["le phocea", "eclipse", "calypso", "titanic" ]
 
