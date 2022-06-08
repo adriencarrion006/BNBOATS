@@ -1,4 +1,5 @@
 
+
 <div class="boat-card-header">
   <h1>RBNBOAT</h1>
     <a href="..." class="btn btn-primary">Retour homepage</a>
@@ -18,3 +19,8 @@
   <p><%= @boat.price %></p>
   <p><%= @boat.localisation %></p>
 </div>
+
+ <%= link_to "Reserver" , new_boat_rent_path(@boat.id) %>
+ <br>
+ <br><%= link_to "return", boats_path %>
+
