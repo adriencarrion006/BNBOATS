@@ -1,16 +1,17 @@
 <div class="confirmation-box col-md-4">
   <div class="row">
     <div class="form-group">
-      <h4>Booking boat</h4>
+      <h4>Modifier votre reservation</h4>
       <br>
 
-      <%= simple_form_for [@boat, @rent] do |f| %>
+       <%= simple_form_for [@boat, @rent] do |f| %>
+         <%= f.label :reservation_date_begin %>
         <%= f.input :reservation_date_begin, as: :date, html: true %>
+        <%= f.label :reservation_date_end %>
         <%= f.input :reservation_date_end, as: :date, html: true  %>
-        <%= f.submit "your booking", class: "btn btn-danger form-control", data: { confirm: "congratulations for your reservation enjoy your vacation!!!!" }  %>
+        <%= f.submit "your booking", class: "btn btn-danger form-control" %>
         <br><br>
       <% end %>
     </div>
   </div>
 </div>
-<%= link_to "return", boat_path(@boat.id) %>

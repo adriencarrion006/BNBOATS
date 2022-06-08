@@ -5,3 +5,7 @@
 <p><%= @rent.reservation_date_end %></p>
 
 <%= link_to "delete this reservation", rent_path(@rent), method: :delete, class: "btn btn-cancel", data: { confirm: "Are you sure you want to delete this reservation?" } %>
+<br>
+<%= link_to "edit", edit_rent_path %>
+<br>
+<%= link_to "return", boats_path %>

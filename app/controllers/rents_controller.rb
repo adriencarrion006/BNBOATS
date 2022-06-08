@@ -23,7 +23,11 @@ class RentsController < ApplicationController
       render :new
     end
   end
+  def edit
+    @rent = Rent.find(params[:id])
+  end
   def update
+    
     @rent = Rent.find(params[:id])
     if @rent.update(rent_params)
       redirect_to rent_path(@rent)
