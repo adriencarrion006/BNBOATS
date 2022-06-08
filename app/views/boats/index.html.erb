@@ -20,14 +20,20 @@
   </div>
 </nav>
 <a href="..." class="btn btn-primary">Se connecter</a>
+<div class="container">
+<div class="wrapper">
 <% @boats.each do |boat|%>
   <%= link_to boat_path(boat) do %>
     <div class="card-product">
         <h2><%= boat.boat_model %></h2>
         <h2>Modele</h2>
-      <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+
+         <%= image_tag boat.picture, size:"500x500" %>
       <div class="card-product-infos">
       </div>
     </div>
   <% end %>
 <% end %>
+
+</div>
+</div>
