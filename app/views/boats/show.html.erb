@@ -10,17 +10,18 @@
 
 </div>
 
-<div class="background-image-card">
-  <%= image_tag @boat.picture, size:"700x700" %>
+<div class="background-image-card d-flex justify-content-around my-1" >
+  <%= image_tag @boat.picture, size:"500x500" %>
 
-</div>
+
 
 <div class="background form">
   <h2><%= @boat.boat_model %></h2>
   <p><%= @boat.description %></p>
-  
+
   <p><%= @boat.licence %></p>
   <p><%= @boat.person_number %></p>
-  <p><%= @boat.price %></p>
+  <p><%= @boat.price  %></p>
   <p><%= @boat.localisation %></p>
+</div>
 </div>
