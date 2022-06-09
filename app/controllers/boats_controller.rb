@@ -1,7 +1,11 @@
 class BoatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @boats = Boat.all
+    if params[:query].present?
+      @boats = Boat.where(localisation: params[:query])
+    else
+      @boats = Boat.all
+    end
   end
   def show
     @boat = Boat.find(params[:id])

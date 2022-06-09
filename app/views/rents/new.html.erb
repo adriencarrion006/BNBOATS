@@ -7,9 +7,10 @@
       <%= simple_form_for [@boat, @rent] do |f| %>
         <%= f.input :reservation_date_begin, as: :date, html: true %>
         <%= f.input :reservation_date_end, as: :date, html: true  %>
-        <%= f.submit "your booking", class: "btn btn-danger form-control" %>
+        <%= f.submit "your booking", class: "btn btn-danger form-control", data: { confirm: "congratulations for your reservation enjoy your vacation!!!!" }  %>
         <br><br>
       <% end %>
     </div>
   </div>
 </div>
+<%= link_to "return", boat_path(@boat.id) %>

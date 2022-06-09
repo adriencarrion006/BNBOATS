@@ -1,18 +1,25 @@
 
+
 <div class="boat-card-header">
   <h1>RBNBOAT</h1>
-    <a href="..." class="btn btn-primary">Retour homepage</a>
-    <a href="..." class="btn btn-primary">Se connecter</a>
+
+    <%= link_to "Retour", boats_path, class:"btn btn-primary" %>
+    <%= link_to "Reserver" , new_boat_rent_path(@boat.id), class: "btn btn-primary" %>
+
+
+
 </div>
 
 <div class="background-image-card">
-  <img src= @boat.picture alt="oopsie">
+
+  <%= image_tag @boat.picture, size:"700x700" %>
+
 </div>
 
 <div class="background form">
   <h2><%= @boat.boat_model %></h2>
   <p><%= @boat.description %></p>
-  <p><%= @boat.picture %></p>
+
   <p><%= @boat.licence %></p>
   <p><%= @boat.person_number %></p>
   <p><%= @boat.price %></p>

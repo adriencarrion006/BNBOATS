@@ -4,26 +4,37 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Acceuil</span></a>
+     <%= link_to "Retour", root_path, class:"btn btn-primary" %>
       <a class="nav-item nav-link" href="#">Lieu</a>
       <a class="nav-item nav-link" href="#">Prix</a>
       <a class="nav-item nav-link disabled" href="#">Bateau</a>
     </div>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
+  <%= form_tag boats_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Choose place"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
   </div>
 </nav>
 <a href="..." class="btn btn-primary">Se connecter</a>
-<% @boats.each do |boat|%>
-  <%= link_to boat_path(boat) do %>
-    <div class="card-product">
-        <h2><%= boat.boat_model %></h2>
-        <h2>Modele</h2>
-      <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
-      <div class="card-product-infos">
+
+<div class="container flex-column ">
+
+  <% @boats.each do |boat|%>
+    <%= link_to boat_path(boat) do %>
+      <div class="card-product d-flex justify-content-around my-1" >
+        <div class="">
+            <h2><%= boat.boat_model %></h2>
+            <h2>Modele</h2>
+        </div>
+        <div>
+          <%= image_tag boat.picture, size:"500x500" %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
+
+</div>
