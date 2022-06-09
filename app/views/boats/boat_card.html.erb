@@ -3,24 +3,30 @@
 <div class="boat-card-header">
   <h1>RBNBOAT</h1>
     <a href="..." class="btn btn-primary">Retour homepage</a>
-    <a href="..." class="btn btn-primary">Se connecter</a>
+    
+    <%= link_to "Se connecter", new_user_session_path, class:"btn btn-primary" %>
 </div>
-
 
 <div class="background image card">
 
-<img src="https://images.unsplash.com/photo-1561508539-d46a8ac4b20a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGJvYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="oopsie"></>
-<%= link_to boats_path %>
+
+  <div class="background image card container flex-column">
 
 
-</div>
 
-<div class="background form">
-  <h2> boat_model </h2>
-    <p> description </p>
-    <p> picture </p>
-    <p> licence </p>
-    <p> person_number </p>
-    <p> price </p>
-    <p> localisation </p>
-</div>
+
+
+
+
+  <div class="background form">
+    <h2> boat_model </h2>
+      <p> description </p>
+      <p> picture </p>
+      <p> licence </p>
+      <p> person_number </p>
+      <p> price </p>
+      <p> localisation </p>
+  </div>
+  </div>
+  </div>
+  </div>

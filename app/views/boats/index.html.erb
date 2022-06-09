@@ -1,3 +1,4 @@
+
 <div class="background-homepage">
   <img src="background_img.jpg" alt="yacht">
   <h1>B&Boats</h1>
@@ -23,7 +24,9 @@
   </nav>
   <a href="..." class="btn btn-primary">Se connecter</a>
 
+
   <div class="container flex-column ">
+
 
     <% @boats.each do |boat|%>
       <%= link_to boat_path(boat) do %>
@@ -35,6 +38,7 @@
           <div>
             <%= image_tag boat.picture, size:"500x500" %>
           </div>
+
         </div>
       <% end %>
     <% end %>

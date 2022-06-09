@@ -1,11 +1,18 @@
-<br>
-<br>
-<h2><%= @boat.boat_model %></h2>
-<p><%= @rent.reservation_date_begin %></p>
-<p><%= @rent.reservation_date_end %></p>
 
-<%= link_to "delete this reservation", rent_path(@rent), method: :delete, class: "btn btn-cancel", data: { confirm: "Are you sure you want to delete this reservation?" } %>
-<br>
-<%= link_to "edit", edit_rent_path %>
-<br>
-<%= link_to "return", boats_path %>
+
+
+
+<div class="background-image-card d-flex justify-content-around my-1" >
+  <%= image_tag @boat.picture, size:"500x500" %>
+
+    <div class="background form">
+    <h2><%= @boat.boat_model %></h2>
+      <p><%= @boat_price %></p>
+      <p><%= @rent.reservation_date_begin %></p>
+      <p><%= @rent.reservation_date_end %></p>
+      <p><%= link_to "delete this reservation", rent_path(@rent), method: :delete, class: "btn btn-cancel", data: { confirm: "Are you sure you want to delete this reservation?" } %></p>
+      <p><%= link_to "edit", edit_rent_path  %></p>
+      <p><%= link_to "return", boats_path %></p>
+      <p><%= link_to "log out", destroy_user_session_path, method: :delete, class: "btn btn-cancel" %></p>
+  </div>
+</div>
