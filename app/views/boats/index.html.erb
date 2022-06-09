@@ -8,6 +8,7 @@
       <a class="nav-item nav-link" href="#">Lieu</a>
       <a class="nav-item nav-link" href="#">Prix</a>
       <a class="nav-item nav-link disabled" href="#">Bateau</a>
+      <%= link_to "Se connecter", user_session_path, class:"btn btn-primary" %>
     </div>
   <%= form_tag boats_path, method: :get do %>
   <%= text_field_tag :query,
@@ -19,7 +20,7 @@
 <% end %>
   </div>
 </nav>
-<a href="..." class="btn btn-primary">Se connecter</a>
+
 
 <div class="container flex-column ">
 
@@ -28,10 +29,10 @@
       <div class="card-product d-flex justify-content-around my-1" >
         <div class="">
             <h2><%= boat.boat_model %></h2>
-            <h2>Modele</h2>
+
         </div>
         <div>
-          <%= image_tag boat.picture, size:"500x500" %>
+          <%= image_tag boat.picture, size:"400x400" %>
         </div>
       </div>
     <% end %>

@@ -6,10 +6,20 @@ class RentsController < ApplicationController
   def show
     @rent = Rent.find(params[:id])
     @boat = Boat.find(@rent[:boat_id])
+    @number_days = @rent.reservation_date_end.strftime("%j").to_i-@rent.reservation_date_begin.strftime("%j").to_i
+    @boat_price = @boat.price * @number_days
+
   end
   def new
     @boat = Boat.find(params[:boat_id])
     @rent = Rent.new
+    @rents = @boat.rents
+    @rents_dates = @rents.map do |rent|
+      {
+        from: rent.reservation_date_begin,
+        to: rent.reservation_date_end
+      }
+    end
 
   end
   def create
@@ -27,7 +37,7 @@ class RentsController < ApplicationController
     @rent = Rent.find(params[:id])
   end
   def update
-    
+
     @rent = Rent.find(params[:id])
     if @rent.update(rent_params)
       redirect_to rent_path(@rent)
