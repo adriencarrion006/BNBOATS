@@ -3,6 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-transparent">
         <span class="navbar-toggler-icon"></span>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <%= submit_tag "Search", class: "btn btn-primary" %>
       <%= form_tag boats_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
@@ -10,13 +11,7 @@
         placeholder: "Choose place"
       %>
     <% end %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-        <button class="login" type="button">Se connecter</button>
+        <button class="custom-btn btn-12"><span>Click!</span><span>Login</span></button>
       </div>
     </nav>
-
-
-    <%# <%= link_to boats_path do %>
-    <%# <img src="https://images.unsplash.com/photo-1545566239-0b2fb5c50bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fGJvYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Bateau homepage">
-    <% end %>
 </div>
