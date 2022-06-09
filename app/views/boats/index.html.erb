@@ -4,7 +4,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-     <%= link_to "Retour", :back, class:"btn btn-primary" %>
+     <%= link_to "Retour", root_path, class:"btn btn-primary" %>
       <a class="nav-item nav-link" href="#">Lieu</a>
       <a class="nav-item nav-link" href="#">Prix</a>
       <a class="nav-item nav-link disabled" href="#">Bateau</a>
@@ -20,20 +20,21 @@
   </div>
 </nav>
 <a href="..." class="btn btn-primary">Se connecter</a>
-<div class="container">
-<div class="wrapper">
-<% @boats.each do |boat|%>
-  <%= link_to boat_path(boat) do %>
-    <div class="card-product">
-        <h2><%= boat.boat_model %></h2>
-        <h2>Modele</h2>
 
-         <%= image_tag boat.picture, size:"500x500" %>
-      <div class="card-product-infos">
+<div class="container flex-column ">
+
+  <% @boats.each do |boat|%>
+    <%= link_to boat_path(boat) do %>
+      <div class="card-product d-flex justify-content-around my-1" >
+        <div class="">
+            <h2><%= boat.boat_model %></h2>
+            <h2>Modele</h2>
+        </div>
+        <div>
+          <%= image_tag boat.picture, size:"500x500" %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
 
-</div>
 </div>
