@@ -1,40 +1,43 @@
-<h1>B&Boats</h1>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-     <%= link_to "Retour", root_path, class:"btn btn-primary" %>
-      <a class="nav-item nav-link" href="#">Lieu</a>
-      <a class="nav-item nav-link" href="#">Prix</a>
-      <a class="nav-item nav-link disabled" href="#">Bateau</a>
-    </div>
-  <%= form_tag boats_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Choose place"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-  </div>
-</nav>
-<a href="..." class="btn btn-primary">Se connecter</a>
-
-<div class="container flex-column ">
-
-  <% @boats.each do |boat|%>
-    <%= link_to boat_path(boat) do %>
-      <div class="card-product d-flex justify-content-around my-1" >
-        <div class="">
-            <h2><%= boat.boat_model %></h2>
-            <h2>Modele</h2>
-        </div>
-        <div>
-          <%= image_tag boat.picture, size:"500x500" %>
-        </div>
+<div class="background-homepage">
+  <img src="background_img.jpg" alt="yacht">
+  <h1>B&Boats</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      <%= link_to "Retour", root_path, class:"btn btn-primary" %>
+        <a class="nav-item nav-link" href="#">Lieu</a>
+        <a class="nav-item nav-link" href="#">Prix</a>
+        <a class="nav-item nav-link disabled" href="#">Bateau</a>
       </div>
-    <% end %>
+    <%= form_tag boats_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Choose place"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
+    </div>
+  </nav>
+  <a href="..." class="btn btn-primary">Se connecter</a>
 
+  <div class="container flex-column ">
+
+    <% @boats.each do |boat|%>
+      <%= link_to boat_path(boat) do %>
+        <div class="card-product d-flex justify-content-around my-1" >
+          <div class="">
+              <h2><%= boat.boat_model %></h2>
+              <h2>Modele</h2>
+          </div>
+          <div>
+            <%= image_tag boat.picture, size:"500x500" %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
 </div>
