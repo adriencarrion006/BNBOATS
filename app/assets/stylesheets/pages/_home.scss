@@ -101,7 +101,6 @@ h1{
 .btn-primary{
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
   font-weight: bold;
 }
 .boutondemarrage{
@@ -110,4 +109,9 @@ h1{
   text-align: center;
   align-items: center;
   height: 300px;
+}
+.mt-4{
+width: 200px;
+display: flex;
+margin-left: 670px;
 }
