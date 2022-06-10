@@ -1,16 +1,33 @@
 
-.container {
+// .container2 {
+//   display: flex;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-gap: 16px;
+//   flex-grow: 1;
+
+// }
+
+.boat-card-header{
+  background-color: rgb(243, 246, 247);
+  font-weight: bolder;
+  width: 100%;
+  height: 200px;
+}
+.background-image-card {
   display: flex;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   flex-grow: 1;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: azure;
+  padding: 20px;
+  // background-image: url("mer.jpg");
+
 
 }
-
-.boat-card-header{
-  background-color: rgb(172, 225, 231);
-  font-weight: bolder;
-  width: 100%;
-  height: 200px;
-}
+// .background{
+//   background-color: white;
+// }

@@ -4,15 +4,15 @@
       <h4>Modifier votre reservation</h4>
       <br>
 
-       <%= simple_form_for [@boat, @rent] do |f| %>
-         <%= f.label :reservation_date_begin %>
-        <%= f.input :reservation_date_begin, as: :date, html: true %>
-        <%= f.label :reservation_date_end %>
-        <%= f.input :reservation_date_end, as: :date, html: true  %>
-        <%= f.submit "your booking", class: "btn form-control" %>
+         <%= simple_form_for [@boat, @rent] do |f| %>
+        <%= f.input :reservation_date_begin, label: "Sélectionnez vos dates", as: :string, required: false, input_html: { id: "range_start", class: "d-none" } %>
+          <%= f.input :reservation_date_end, label: false, as: :string, required: false, input_html: { id: "range_end", class: "d-none" } %>
+        <%= f.submit "your booking", class: "btn  form-control", data: { confirm: "congratulations for your reservation enjoy your vacation!!!!" }  %>
         <br><br>
       <% end %>
     </div>
-  </div>
 </div>
-<%= link_to "return", :back %>
+<%# <%= link_to "return", boat_path(@boat.id) %> %>
+<div id="booking-form-div"
+     data-bookings="<%= @rents_dates.to_json %>">
+</div>
