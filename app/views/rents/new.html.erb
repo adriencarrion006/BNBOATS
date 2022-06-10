@@ -7,7 +7,7 @@
       <%= simple_form_for [@boat, @rent] do |f| %>
         <%= f.input :reservation_date_begin, label: "Sélectionnez vos dates", as: :string, required: false, input_html: { id: "range_start", class: "d-none" } %>
           <%= f.input :reservation_date_end, label: false, as: :string, required: false, input_html: { id: "range_end", class: "d-none" } %>
-        <%= f.submit "your booking ", class: "btn  form-control", data: { confirm: "congratulations for your reservation enjoy your vacation!!!!" }  %>
+        <%= f.submit "your booking ", class: "btn  form-control btn-primary", data: { confirm: "congratulations for your reservation enjoy your vacation!!!!" }  %>
         <br><br>
       <% end %>
     </div>
