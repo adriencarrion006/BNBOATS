@@ -12,7 +12,8 @@
       <% end %>
     </div>
 </div>
-<%= link_to "return", boat_path(@boat.id) %>
+<%# <%= link_to "return", boat_path(@boat.id) %>
+<p><%= link_to "return", boats_path, class: "btn btn-primary mt-4" %></p>
 <div id="booking-form-div"
      data-bookings="<%= @rents_dates.to_json %>">
 </div>

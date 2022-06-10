@@ -98,10 +98,20 @@ h1{
   background: black;
 }
 
+.btn-primary{
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
 .boutondemarrage{
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   height: 300px;
+}
+.mt-4{
+width: 200px;
+display: flex;
+margin-left: 670px;
 }
