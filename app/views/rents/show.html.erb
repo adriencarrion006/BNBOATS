@@ -1,9 +1,12 @@
-<div class="background-card d-flex justify-content-around my-1" >
-  <%= image_tag @boat.picture, size:"500x500" %>
+<br>
+<br>
+<div class="background-image-cards ">
+<div class="background-cards" >
+  <%= image_tag @boat.picture, size:"450x450" %>
 
     <div class="backgroundC form">
     <h2><%= @boat.boat_model %></h2>
-      <p><%= @boat_price %></p>
+      <p><%= @boat_price %>€</p>
       <p><%= @rent.reservation_date_begin %></p>
       <p><%= @rent.reservation_date_end %></p>
       <%= link_to "edit", edit_rent_path, class: "btn btn-primary"  %>
@@ -12,3 +15,8 @@
       <p><%= link_to "log out", destroy_user_session_path, method: :delete, class: "btn btn-warning" %></p>
       <p><%= link_to "delete this reservation", rent_path(@rent), method: :delete, class: "btn btn-cancel", data: { confirm: "Are you sure you want to delete this reservation?" }, class: "btn btn-danger" %></p>
   </div>
+<<<<<<< HEAD
+=======
+</div>
+</div>
+>>>>>>> master

@@ -35,15 +35,23 @@ class RentsController < ApplicationController
   end
   def edit
     @rent = Rent.find(params[:id])
+    @boat = @rent.boat
+    @rents = @boat.rents
+    @rents_dates = @rents.map do |rent|
+      {
+        from: rent.reservation_date_begin,
+        to: rent.reservation_date_end
+      }
   end
+end
   def update
-
+    # @boat = Boat.find(params[:boat_id])
     @rent = Rent.find(params[:id])
-    if @rent.update(rent_params)
+    # @rent.user = current_user
+    # @rent.boat = @boat
+    @rent.update(rent_params)
       redirect_to rent_path(@rent)
-    else
-      render :edit
-    end
+
   end
   def destroy
     @rent = Rent.find(params[:id])

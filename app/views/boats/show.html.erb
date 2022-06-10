@@ -1,29 +1,16 @@
-
-
-<div class="boat-card-header">
-  <h1>RBNBOAT</h1>
-
-    <%= link_to "Retour", boats_path, class:"btn btn-primary" %>
+<br>
+<br>
+<div class="background-image-card d-flex justify-content-around my-2">
+  <%= image_tag @boat.picture, size:"450x450" %>
+  <div >
+    <h2><%= @boat.boat_model %></h2>
+    <p><%= @boat.description %></p>
+    <p><%= @boat.licence %></p>
+    <p><%= @boat.person_number %></p>
+    <p><%= @boat.price  %>€</p>
+    <p><%= @boat.localisation %></p>
+    <br>
+    <br>
     <%= link_to "Reserver" , new_boat_rent_path(@boat.id), class: "btn btn-primary" %>
-
-
-
-</div>
-
-
-<div class="background-image-card">
-
-  <%= image_tag @boat.picture, size:"700x700" %>
-
-
-
-<div class="background form">
-  <h2><%= @boat.boat_model %></h2>
-  <p><%= @boat.description %></p>
-
-  <p><%= @boat.licence %></p>
-  <p><%= @boat.person_number %></p>
-  <p><%= @boat.price  %></p>
-  <p><%= @boat.localisation %></p>
-</div>
+  </div>
 </div>

@@ -20,7 +20,7 @@ h1{
   background-color: transparent;
 }
 
-.btn-12{
+.btn-12 {
   margin-top: -40px;
   margin-left: 1000px;
   border:none;
@@ -103,4 +103,11 @@ h1{
   justify-content: space-around;
   margin-top: 20px;
   font-weight: bold;
+}
+.boutondemarrage{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 300px;
 }
