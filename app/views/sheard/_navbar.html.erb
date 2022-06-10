@@ -1,0 +1,22 @@
+
+    <h1>RBNBOATS</h1>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-transparent">
+        <span class="navbar-toggler-icon"></span>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+
+      <%= form_tag boats_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Choose place"
+      %>
+    <% end %>
+    <div>
+        <%= link_to new_user_session_path do %>
+        <button class="custom-btn btn-12" ><span>Click!</span><span>Login</span></button>
+      </div>
+      <%end%>
+      </div>
+    </nav>
