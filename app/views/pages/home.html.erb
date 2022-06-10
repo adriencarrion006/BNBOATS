@@ -14,7 +14,11 @@
         placeholder: "Choose place"
       %>
     <% end %>
-        <button class="custom-btn btn-12"><span>Click!</span><span>Login</span></button>
+    <div>
+        <%= link_to new_user_session_path do %>
+        <button class="custom-btn btn-12" ><span>Click!</span><span>Login</span></button>
+      </div>
+      <%end%>
       </div>
     </nav>
     <%# <%= link_to boats_path do %>
