@@ -1,4 +1,13 @@
 
+.container {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+
+}
+
 .boat-card-header{
   background-color: rgb(172, 225, 231);
   font-weight: bolder;
